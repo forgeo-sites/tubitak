@@ -43,7 +43,193 @@
     }
   </script>
   <div class="canvas-container">
-    <div style="position:absolute;left:75px;top:51px;width:930px;height:690px;;font-size:16px;color:#333;font-weight:normal;text-align:left;display:flex;align-items:center">Tamam Cesur, 7 ve Alzheimer projesinin (5) detaylarını acımasız mentör modunda açıyorum. Tırt bir yer varsa direkt söyleyeceğim.---🔥 7) İşitme Engelliler İçin Gerçek Zamanlı Konuşma → İşaret Dili SimülatörüBu fikir çok güçlü, ama aynı zamanda en riskli. Çünkü “işaret dili üretimi” karmaşık. Ama doğru sadeleştirilirse TÜBİTAK’ta patlatır.Aşağıda çöpe atılması gereken kısımlar ve yapılabilir, gerçekçi tasarım var.---✔ GERÇEKÇİ VE ÇALIŞABİLİR SÜRÜM(En güçlü, en uygulanabilir hâlini yazıyorum.)🎯 AmaçKonuşmaları anlık olarak yazıya çevirip bunu işaret dili karşılığı olan 300–1000 kelimelik bir temel sözlükten seçerek 2D avatar animasyonu ile gösteren mobil uygulama.> Animasyon motorunu sen sıfırdan yapmayacaksın.PNG sprite animasyon veya hazır JSON Lottie animasyonları kullanılacak.Bu yüzden proje sürdürülebilir hale geliyor.---🧠 Çalışma Mantığı1. Konuşma → Yazı (Speech-to-Text)RN’de Whisper API veya cihaz içi Vosk.Türkçe destek var.2. Metin → İşaret Dili HaritalamaHer kelimenin işaret dilinde birebir karşılığı yok.Bu yüzden:Cümle → anlam parçalarına ayrılır.Sözlükte olan kelimeler çekilir.Sözlükte olmayanlara: yakın anlamlı kelime → “fallback” eşleştirme.3. Avatar AnimasyonuJSON/Lottie animasyonları → RN Lottie Player ile çalınır.Her işaret “clip” olarak oynatılır.Kesintisiz geçiş için animasyon kuyruğu sistemi yazılır.4. Web PanelEn çok kullanılan kelimelerKullanıcıların konuşma süreleriEğitim için kelime paketi yönetimiAnimasyon düzenleme (basit JSON upload)---⚡ Neden Güçlü?İşitme engellilere odaklı → TÜBİTAK “erişilebilirlik” projelerine bayılır.AI + sosyal fayda + mobil + web → ideal kombinasyon.Gerçek dünyada karşılığı var → uygulanabilirlik yüksek.---❌ Zayıf Nokta (Dikkat!)Eğer “tam Türk işaret dili generasyonu” gibi bir iddia koyarsan proje anında tırt.Çünkü bu ciddi bir araştırma konusu.Seninki temel kelime + temel cümle işaretleri üzerinden gitmeli.------🧠 (Ekstra İyi) Alzheimer Kaybolma Risk Analiz Sistemi (5. Proje)Bu proje kısa sürede bile etkileyici sonuç veren bir yapıda.Daha sade ama çok güçlü.Risk modeli güzel tasarlanırsa ödül alır.---🎯 AmaçAlzheimer hastalarının olağan dışı rota/gezi davranışlarını tespit ederek aileye uyarı veren mobil + web tabanlı güvenlik sistemi.---🧩 Çalışma Tasarımı1) Mobil Uygulama (Arka Planda GPS Takibi)Telefon cebinde → konumu 20–30 saniyede bir topluyor.Veriyi sunucuya gönderiyor.2) Risk Analiz ModeliHer hastanın “normal davranış profili” oluşturulur:Günlük rotaSaatlik hareket alışkanlığıOrtalama hızDönüş sıklığıAlışılmış çember (ev çevresi mesafesi)Sonra sistem şu anki hareketleri buna göre karşılaştırır.3) Anormal Durum Tespiti (Trigger Mekanizması)Alışılmış bölgenin dışına çıkmaSüresiz durma → düşme ihtimaliNormalden hızlı yön değiştirmeUzun süre ters rotaBu durumda aileye:“Olağan dışı hareket tespit edildi.”Uyarısı gider.4) Web PanelHastanın günlük rota haritasıRisk grafiğiHaftalık alışkanlık raporuAnlık konumUyarı geçmişiBirden fazla kullanıcı yönetimi (aile bireyleri ekleme)---⚡ Neden Güçlü?“Hayat kurtaran teknoloji” kategorisine giriyor.Veri analizi içerdiği için bilimsel yönü kuvvetli.Prototip yapmak kolay → RN + Node.js yeterli.Toplumsal değeri yüksek.---❌ Zayıf NoktaSağlık iddiası yapma.“Erken tespit” değil, davranış analizi + güvenlik uygulaması de.------🔥 Son Yorum — Hangisi Daha Ödüllük?7 numara daha teknolojik gösterişli.Alzheimer projesi daha insani ve jürinin yumuşak karnı.İkisi de iyi ama biri tırt değil; sadece 7’de animasyon kısmını sadeleştirmezsen çakılırsın.İstersen her ikisini de TÜBİTAK formatında tam proje dosyasına çevireyim:AmaçYöntemÖzgün değerYenilik yönüİş paketleriZaman çizelgesiMimarî tasarımHangisiyle başlayayım?</div>
+    <div style="position:absolute;left:343.25px;top:-184px;width:1473.5px;height:1189.5px;;font-size:16px;color:#333;font-weight:normal;text-align:left;display:flex;align-items:center">Evet, mobil uygulama üzerinden hem hastayı seçmek hem de veli yönetimi yapmak kesinlikle mümkün ve oldukça pratik bir çözüm olur. Bu şekilde kullanıcılar hem hastaların bilgilerini yönetebilir, hem de aile üyeleri veya bakım görevlileri için merkezi bir yönetim paneli oluşturabilir. Hem Alzheimer hastalarının kaybolma riski takip edilebilir, hem de aile üyeleri uygulamayı kullanarak anlık bildirimler alabilir ve gerekli aksiyonları alabilirler.
+Mobil uygulama üzerinden yönetim yapabilmek için temel özellikleri ve işleyişi detaylıca planlayabiliriz.
+Uygulama Tasarımı ve İşleyişi
+Temel Kullanıcı Akışı:
+
+
+Kullanıcı Kaydı ve Giriş:
+
+
+Kullanıcı, uygulamaya veli (aile bireyi) olarak kaydolur. Veli kaydını tamamladıktan sonra, Alzheimer hastalarını takip etmek için hastaların bilgilerini sisteme girer.
+
+
+Ayrıca, hastaların bilgilerini güncelleyebileceği bir ekran olabilir (ad, yaş, hastalık durumu vb.).
+
+
+Giriş yapan veliler, birden fazla hastayı aynı anda takip edebilir ve yönetebilir.
+
+
+
+
+Hasta Seçimi ve Profil Yönetimi:
+
+
+Veli, giriş yaptıktan sonra hastaları seçebilir ve bu hastanın konumunu ve davranışlarını takip edebilir.
+
+
+Hasta Profili: Her hasta için bir profil oluşturulabilir. Bu profilde hastanın geçmiş verileri, güncel konumu, alışkanlıkları, normal rota bilgileri gibi veriler yer alabilir.
+
+
+Hasta Ekleme: Veli yeni bir hasta eklemek için hastanın bilgilerini (isim, yaş, tıbbi geçmiş vb.) girebilir. Ayrıca, her hastaya bir "güvenli alan" belirlenebilir, örneğin, ev çevresi.
+
+
+
+
+Konum Takibi ve Uyarı Sistemi:
+
+
+Gerçek Zamanlı Konum Takibi: Uygulama, hastanın konumunu sürekli olarak takip eder (GPS verisi ile). Bu veriler sürekli olarak backend sunucusuna iletilir ve web panelinde de görülebilir.
+
+
+Anormal Davranış Tespiti: Uygulama, hastanın normal rota dışına çıkıp çıkmadığını kontrol eder. Eğer hastanın hareketi alışılmadık bir şekilde değişirse (örneğin, uzun süre aynı noktada kalma, hızlı bir şekilde yön değiştirme, ters rota izleme), bir alarm tetiklenir.
+
+
+Bildirim Sistemi: Eğer anormal bir durum tespit edilirse, veli hemen push bildirimi, SMS veya e-posta alır. Bu sayede, aile bireyi, hastanın durumunu kontrol edebilir ve gerekli aksiyonu alabilir.
+
+
+
+
+Günlük Hareket Raporları:
+
+
+Uygulama, hastanın günlük hareketlerini analiz eder ve grafiksel olarak gösterir.
+
+
+Rota Takibi: Hastanın geçtiği yollar harita üzerinde görselleştirilir.
+
+
+Risk Analiz Raporu: Haftalık veya aylık analizlerde, hastanın anormal hareketlerini gösteren raporlar oluşturulabilir.
+
+
+
+
+Web Paneli ve Yönetim Özellikleri:
+
+
+Web paneli üzerinden birden fazla hasta yönetilebilir. Aile bireyleri veya bakım görevlileri, web üzerinden hasta profillerine erişebilir.
+
+
+Çoklu Kullanıcı Yönetimi: Aile bireyleri, uygulamaya birden fazla kullanıcı ekleyebilir (örneğin, farklı aile üyeleri, bakım görevlileri).
+
+
+Web panelinde hastanın anlık konumu, geçmiş hareketleri, alarmlar ve davranış analizi gibi veriler gösterilebilir.
+
+
+
+
+Ekranlar ve Uygulama Arayüzü:
+
+
+Ana Ekran: Hastanın adı, yaşadığı konum, en son hareket bilgisi ve anlık uyarılar.
+
+
+Hasta Profili Ekranı: Hastanın bilgileri (isim, yaş, günlük rutin vb.), konum geçmişi, güvenli alan.
+
+
+Uyarılar ve Bildirimler: Eğer anormal bir durum tespit edilirse, kullanıcıya bildirilen uyarılar.
+
+
+Raporlar ve Analizler: Günlük/haftalık analizler, risk durumu.
+
+
+
+
+
+Teknik Çözüm ve Araçlar
+Teknik Bileşenler:
+
+
+Frontend (Mobil Uygulama):
+
+
+React Native: Hem Android hem de iOS platformları için mobil uygulama geliştirmek için kullanabileceğin bir framework. React Navigation kullanarak ekranlar arası geçiş ve yönetim kolayca yapılabilir.
+
+
+React Native Geolocation: Hastanın konumunu almak için react-native-geolocation-service gibi bir kütüphane kullanabilirsin.
+
+
+Push Bildirimleri: Firebase Cloud Messaging (FCM) ile push bildirimlerini gönderebilirsin.
+
+
+Map API: Google Maps API ile hastanın konumunu harita üzerinde gösterebilirsin.
+
+
+
+
+Backend:
+
+
+Node.js & Express: Backend API’leri oluşturmak ve hastanın konum verilerini yönetmek için kullanılabilir.
+
+
+MongoDB: Kullanıcı ve hasta verilerini depolamak için bir veritabanı. Her hasta için profil oluşturulabilir ve veriler güncellenebilir.
+
+
+Socket.io: Gerçek zamanlı veri iletimi için Socket.io kullanılabilir. Bu, hastanın konumunun sürekli olarak güncellenmesini sağlar.
+
+
+
+
+Makine Öğrenmesi ve Risk Analizi:
+
+
+Python (scikit-learn, TensorFlow): Eğer anormal hareket analizi yapacaksan, hastanın hareketleri üzerine bir model kurmak için Python ve makine öğrenmesi kütüphanelerini kullanabilirsin. Örneğin, hastanın günlük rutin hareketlerinden bir model çıkararak, bu modelin dışında kalan hareketleri "anormal" olarak işaretleyebilirsin.
+
+
+Zaman Serisi Analizi: Günlük hareketler zaman serisi verisi olarak analiz edilebilir. Bu, hastanın normal davranışlarını öğrenip, bu davranışlardan sapmaları tespit etmek için yararlı olabilir.
+
+
+
+
+Veri Depolama ve Güvenlik:
+
+
+Firebase veya AWS S3 gibi bulut tabanlı servisler ile hastaların konum verilerini ve diğer bilgilerini güvenli bir şekilde depolayabilirsin.
+
+
+SSL/TLS şifreleme kullanarak tüm veri iletişimini güvence altına alman önemlidir.
+
+
+
+
+Bildirim ve Acil Yardım:
+
+
+Bildirimlerin yanı sıra, acil durumlarda aile üyeleri SMS, e-posta veya telefonla daha hızlı uyarılabilir. Bu için Twilio gibi bir servis kullanılabilir.
+
+
+Eğer bir hasta ciddi şekilde kaybolursa, yerel acil yardım birimleri ile entegrasyon da düşünülebilir.
+
+
+
+
+
+Uygulamanın Temel İşleyişi Özetle:
+
+
+Veli kaydını yapar ve hastaların bilgilerini uygulamaya girer.
+
+
+Uygulama, hastanın konumunu sürekli takip eder ve harita üzerinden görselleştirir.
+
+
+Eğer anormal hareketler (örneğin, rotadan sapma) tespit edilirse, veliye anında bildirim gönderilir.
+
+
+Günlük raporlar, hastanın alışkanlıklarını ve normal davranışlarını gösterir. Aile üyeleri, hastalarının günlük rotalarını analiz edebilir.
+
+
+Uygulama, aynı anda birden fazla hasta takip etmeye izin verir ve her hastanın bilgileri düzenli olarak güncellenebilir.
+
+
+Acil durum uyarılarını hem mobil cihazlarda hem de web panelinde gösterebilir.
+
+
+Sonuç:
+Bu yaklaşım, mobil uygulama üzerinden hem hastaların konumlarını hem de aile bireylerinin yönetimini sağlayarak çok fonksiyonel bir sistem yaratmanıza olanak tanır. Hem veliler hem de bakım görevlileri hastaları gerçek zamanlı olarak izleyebilir, anormal durumları tespit edebilir ve acil durumda hemen aksiyon alabilir. Hem hastaların güvenliği artar, hem de ailelerin huzuru sağlanır.
+Bu tür bir çözüm geliştirmek, Alzheimer hastaları için gerçekten değerli bir araç olabilir, özellikle de hastaların kaybolma riskini önceden fark edebilmek ve zamanında müdahale edebilmek açısından.</div>
   </div>
   <div class="forgeo-badge">
     <a href="https://code.forgeo.xyz" target="_blank" rel="noopener noreferrer">
